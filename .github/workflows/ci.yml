@@ -11,6 +11,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/prepare
       - run: pnpm build
       - run: node ./lib/index.js
@@ -19,6 +20,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/prepare
       - run: pnpm lint
 
@@ -26,6 +28,7 @@ jobs:
     name: Format
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/prepare
       - run: pnpm format --list-different
 
@@ -33,6 +36,7 @@ jobs:
     name: Coverage
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/prepare
       - run: pnpm coverage
       - uses: codecov/codecov-action@v3
@@ -41,5 +45,6 @@ jobs:
     name: Type Check
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/prepare
       - run: pnpm type_check
