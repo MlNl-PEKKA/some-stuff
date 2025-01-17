@@ -17,10 +17,9 @@
     "coverage": "vitest run --coverage",
     "format": "prettier .",
     "lint": "eslint . --max-warnings 0",
-    "release": "pnpm build && changesets publish",
+    "release": "pnpm build && pnpm changeset publish",
     "test": "vitest",
-    "type_check": "tsc",
-    "version": "pnpm changesets version"
+    "type_check": "tsc"
   },
   "keywords": [
     "typescript"
