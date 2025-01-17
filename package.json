@@ -1,5 +1,6 @@
 {
   "name": "some-stuff",
+  "description": "A minimal typescript package",
   "version": "0.0.2",
   "private": false,
   "publishConfig": {
