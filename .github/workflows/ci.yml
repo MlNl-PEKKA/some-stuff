@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  pull_request: ~
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/prepare
+      - run: pnpm build
+      - run: node ./lib/index.js
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/prepare
+      - run: pnpm lint
+
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/prepare
+      - run: pnpm format --list-different
+
+  coverage:
+    name: Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/prepare
+      - run: pnpm coverage
+      - uses: codecov/codecov-action@v3
+
+  type_check:
+    name: Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/actions/prepare
+      - run: pnpm type_check

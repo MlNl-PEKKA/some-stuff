@@ -1,0 +1,42 @@
+{
+  "name": "some-stuff",
+  "version": "0.0.1",
+  "private": false,
+  "type": "module",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "lib/",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "coverage": "vitest run --coverage",
+    "format": "prettier .",
+    "lint": "eslint . --max-warnings 0",
+    "release": "pnpm build && changesets publish",
+    "test": "vitest",
+    "type_check": "tsc",
+    "version": "pnpm changesets version"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.11",
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.7",
+    "@vitest/coverage-v8": "^3.0.1",
+    "@vitest/eslint-plugin": "^1.1.25",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0",
+    "vitest": "^3.0.1"
+  }
+}
