@@ -39,7 +39,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/prepare
       - run: pnpm coverage
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: MlNl-PEKKA/some-stuff
 
   type_check:
     name: Type Check
