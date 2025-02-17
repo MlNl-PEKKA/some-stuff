@@ -1,2 +1,2 @@
-export * from "./someStuff.js";
-export * from "./someStuff.types.js";
+export * from "./packageStuff.js";
+export * from "./packageStuff.types.js";

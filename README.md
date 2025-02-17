@@ -1,21 +1,21 @@
-<h1 align="center">some-stuff</h1>
+<h1 align="center">package-stuff</h1>
 
 <p align="center">A minimal typescript package</p>
 
 ## Usage
 
 ```shell
-npm i some-stuff
+npm i package-stuff
 ```
 
 ```ts
-import { someStuff } from "some-stuff";
+import { packageStuff } from "package-stuff";
 
-const result = someStuff();
+const result = packageStuff();
 
 console.log(result);
 ```
 
 ```shell
-Some stuff
+Package stuff
 ```

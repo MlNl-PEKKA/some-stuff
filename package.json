@@ -1,14 +1,14 @@
 {
-  "name": "some-stuff",
+  "name": "package-stuff",
   "description": "A minimal typescript package",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": false,
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "directory": "git+https://github.com/MlNl-PEKKA/some-stuff.git"
+    "directory": "git+https://github.com/MlNl-PEKKA/package-stuff.git"
   },
   "author": {
     "name": "Punith G",
